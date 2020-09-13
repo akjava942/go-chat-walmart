@@ -2,10 +2,11 @@
 A basic multi client, multiroom tcp chat server written in GO, can be accessed with telnet. Supports basic multi room and multiple simultaneous connections.  
 
 ## Build
-
-```
 go build server.go
-```
+
+##
+go run server.go
+	- server should start and will be listerning on the ip address:port that is defined in code
 
 ## Usage
 
@@ -20,6 +21,27 @@ Usage of ./server:
 
 ./server
 ```
+
+##Connecting from Windows(10)
+
+	- Please make sure the telenet is turned on
+	- By default it is turned off in windows 10 hence please follow these steps:
+	
+		1.Click the start button, then start typing “Turn Windows features on or off”, and select this option, as shown below.
+		2.The “Turn Windows Features on or off” window should open, scroll down and select “Telnet Client”.
+		3.Click the OK button to proceed, this will display a screen while the changes apply.
+		4.When complete it will display as below, you can now close the window
+		5.Verifying that the telnet client is enabled-
+			Simply open command prompt or powershell, type ‘telnet’ and press enter. If this was successful you should have a prompt similar to the below:
+			
+			Welcome to Microsoft Telnet Client
+
+			Escape Character is 'CTRL+]'
+
+			Microsoft Telnet>
+	- Since the telnet is up on your command prompt, please open a connectetion using command "o 127.0.0.1 23"
+	- Once connected, this would open a new windos promting for with a message Please Enter Name:
+	- Please follow the insturctions from there onwards.
 
 * Connecting to the server:
 
